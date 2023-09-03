@@ -1,0 +1,652 @@
+{
+  "consumer": {
+    "name": "react-client"
+  },
+  "interactions": [
+    {
+      "description": "para crear una Chat",
+      "providerStates": [
+        {
+          "name": "crear chat"
+        }
+      ],
+      "request": {
+        "body": {
+          "guestId": "f21f4103-38e1-42f6-b053-c35680c4e7c4",
+          "hostId": "130e2492-a21c-4211-b68c-91cb3a39f294",
+          "name": "chat 1"
+        },
+        "headers": {
+          "Accept": "*/*",
+          "Content-Type": "application/json"
+        },
+        "matchingRules": {
+          "body": {
+            "$": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            }
+          },
+          "header": {}
+        },
+        "method": "POST",
+        "path": "/chat/create"
+      },
+      "response": {
+        "body": {
+          "status": 201
+        },
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "matchingRules": {
+          "body": {
+            "$": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            }
+          },
+          "header": {}
+        },
+        "status": 201
+      }
+    },
+    {
+      "description": "chats del anfitrion",
+      "providerStates": [
+        {
+          "name": "realizar busqueda de chats"
+        }
+      ],
+      "request": {
+        "headers": {
+          "Accept": "application/json"
+        },
+        "method": "GET",
+        "path": "/chat/host/130e2492-a21c-4211-b68c-91cb3a39f294"
+      },
+      "response": {
+        "body": [
+          {
+            "guestId": "f21f4103-38e1-42f6-b053-c35680c4e7c4",
+            "hostId": "130e2492-a21c-4211-b68c-91cb3a39f294",
+            "id": 2,
+            "name": "Chat 1",
+            "timestamp": "2023-08-26T02:44:39.741Z",
+            "uuid": "86618afb-beca-4502-a9e0-d2ac7df4e586"
+          },
+          {
+            "guestId": "f21f4103-38e1-42f6-b053-c35680c4e7c4",
+            "hostId": "130e2492-a21c-4211-b68c-91cb3a39f294",
+            "id": 6,
+            "name": "Chat 1",
+            "timestamp": "2023-08-26T02:47:19.415Z",
+            "uuid": "31396c32-26cf-418c-b64e-a1eca70b115b"
+          },
+          {
+            "guestId": "f21f4103-38e1-42f6-b053-c35680c4e7c4",
+            "hostId": "130e2492-a21c-4211-b68c-91cb3a39f294",
+            "id": 10,
+            "name": "Chat 1",
+            "timestamp": "2023-08-26T02:48:17.516Z",
+            "uuid": "03457e18-51ba-4171-b86d-b106118dcb0d"
+          }
+        ],
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "matchingRules": {
+          "body": {
+            "$": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            }
+          },
+          "header": {}
+        },
+        "status": 200
+      }
+    },
+    {
+      "description": "chats del host",
+      "providerStates": [
+        {
+          "name": "realizar busqueda de chats"
+        }
+      ],
+      "request": {
+        "headers": {
+          "Accept": "application/json"
+        },
+        "method": "GET",
+        "path": "/chat/host/130e2492-a21c-4211-b68c-91cb3a39f294"
+      },
+      "response": {
+        "body": [
+          {
+            "guestId": "f21f4103-38e1-42f6-b053-c35680c4e7c4",
+            "hostId": "130e2492-a21c-4211-b68c-91cb3a39f294",
+            "id": 2,
+            "name": "Chat 1",
+            "timestamp": "2023-08-26T02:44:39.741Z",
+            "uuid": "86618afb-beca-4502-a9e0-d2ac7df4e586"
+          },
+          {
+            "guestId": "f21f4103-38e1-42f6-b053-c35680c4e7c4",
+            "hostId": "130e2492-a21c-4211-b68c-91cb3a39f294",
+            "id": 6,
+            "name": "Chat 1",
+            "timestamp": "2023-08-26T02:47:19.415Z",
+            "uuid": "31396c32-26cf-418c-b64e-a1eca70b115b"
+          },
+          {
+            "guestId": "f21f4103-38e1-42f6-b053-c35680c4e7c4",
+            "hostId": "130e2492-a21c-4211-b68c-91cb3a39f294",
+            "id": 10,
+            "name": "Chat 1",
+            "timestamp": "2023-08-26T02:48:17.516Z",
+            "uuid": "03457e18-51ba-4171-b86d-b106118dcb0d"
+          }
+        ],
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "matchingRules": {
+          "body": {
+            "$": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            }
+          },
+          "header": {}
+        },
+        "status": 200
+      }
+    },
+    {
+      "description": "chats del huesped",
+      "providerStates": [
+        {
+          "name": "realizar busqueda de chats"
+        }
+      ],
+      "request": {
+        "headers": {
+          "Accept": "application/json"
+        },
+        "method": "GET",
+        "path": "/chat/guest/f21f4103-38e1-42f6-b053-c35680c4e7c4"
+      },
+      "response": {
+        "body": [
+          {
+            "guestId": "f21f4103-38e1-42f6-b053-c35680c4e7c4",
+            "hostId": "130e2492-a21c-4211-b68c-91cb3a39f294",
+            "id": 2,
+            "name": "Chat 1",
+            "timestamp": "2023-08-26T02:44:39.741Z",
+            "uuid": "86618afb-beca-4502-a9e0-d2ac7df4e586"
+          },
+          {
+            "guestId": "f21f4103-38e1-42f6-b053-c35680c4e7c4",
+            "hostId": "130e2492-a21c-4211-b68c-91cb3a39f294",
+            "id": 6,
+            "name": "Chat 1",
+            "timestamp": "2023-08-26T02:47:19.415Z",
+            "uuid": "31396c32-26cf-418c-b64e-a1eca70b115b"
+          },
+          {
+            "guestId": "f21f4103-38e1-42f6-b053-c35680c4e7c4",
+            "hostId": "130e2492-a21c-4211-b68c-91cb3a39f294",
+            "id": 10,
+            "name": "Chat 1",
+            "timestamp": "2023-08-26T02:48:17.516Z",
+            "uuid": "03457e18-51ba-4171-b86d-b106118dcb0d"
+          }
+        ],
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "matchingRules": {
+          "body": {
+            "$": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            }
+          },
+          "header": {}
+        },
+        "status": 200
+      }
+    },
+    {
+      "description": "un texto de busqueda",
+      "providerStates": [
+        {
+          "name": "realizar busqueda de chats"
+        }
+      ],
+      "request": {
+        "headers": {
+          "Accept": "application/json"
+        },
+        "method": "GET",
+        "path": "/chat/host/130e2492-a21c-4211-b68c-91cb3a39f294"
+      },
+      "response": {
+        "body": [
+          {
+            "guestId": "f21f4103-38e1-42f6-b053-c35680c4e7c4",
+            "hostId": "130e2492-a21c-4211-b68c-91cb3a39f294",
+            "name": "Chat 1",
+            "timestamp": "2023-08-26T02:44:39.741Z",
+            "uuid": "86618afb-beca-4502-a9e0-d2ac7df4e586"
+          },
+          {
+            "guestId": "f21f4103-38e1-42f6-b053-c35680c4e7c4",
+            "hostId": "130e2492-a21c-4211-b68c-91cb3a39f294",
+            "name": "Chat 1",
+            "timestamp": "2023-08-26T02:47:19.415Z",
+            "uuid": "31396c32-26cf-418c-b64e-a1eca70b115b"
+          },
+          {
+            "guestId": "f21f4103-38e1-42f6-b053-c35680c4e7c4",
+            "hostId": "130e2492-a21c-4211-b68c-91cb3a39f294",
+            "name": "Chat 1",
+            "timestamp": "2023-08-26T02:48:17.516Z",
+            "uuid": "03457e18-51ba-4171-b86d-b106118dcb0d"
+          },
+          {
+            "guestId": "f21f4103-38e1-42f6-b053-c35680c4e7c4",
+            "hostId": "130e2492-a21c-4211-b68c-91cb3a39f294",
+            "name": "Chat 1",
+            "timestamp": "2023-08-26T02:51:05.384Z",
+            "uuid": "cad5428b-b0e9-42ce-b4d4-231c356b4f78"
+          },
+          {
+            "guestId": "f21f4103-38e1-42f6-b053-c35680c4e7c4",
+            "hostId": "130e2492-a21c-4211-b68c-91cb3a39f294",
+            "name": "Chat 1",
+            "timestamp": "2023-08-26T03:03:14.434Z",
+            "uuid": "9f87fdb3-aefc-4f7b-bb57-58f8d9c7c083"
+          },
+          {
+            "guestId": "f21f4103-38e1-42f6-b053-c35680c4e7c4",
+            "hostId": "130e2492-a21c-4211-b68c-91cb3a39f294",
+            "name": "Chat 1",
+            "timestamp": "2023-08-26T03:13:38.569Z",
+            "uuid": "ba6af2ce-48a3-45de-b832-da43dbdd9de9"
+          },
+          {
+            "guestId": "f21f4103-38e1-42f6-b053-c35680c4e7c4",
+            "hostId": "130e2492-a21c-4211-b68c-91cb3a39f294",
+            "name": "Chat 1",
+            "timestamp": "2023-08-26T03:16:23.237Z",
+            "uuid": "a172d83c-feec-4a5b-85a8-16ec4a9e4aa8"
+          },
+          {
+            "guestId": "f21f4103-38e1-42f6-b053-c35680c4e7c4",
+            "hostId": "130e2492-a21c-4211-b68c-91cb3a39f294",
+            "name": "Chat 1",
+            "timestamp": "2023-08-26T03:20:56.419Z",
+            "uuid": "5abc5ff8-f674-49ea-955f-047f6c4828e6"
+          },
+          {
+            "guestId": "f21f4103-38e1-42f6-b053-c35680c4e7c4",
+            "hostId": "130e2492-a21c-4211-b68c-91cb3a39f294",
+            "name": "Chat 1",
+            "timestamp": "2023-08-26T03:22:43.350Z",
+            "uuid": "cc600d60-7f58-4d86-9e02-54ed7f9b1cf6"
+          },
+          {
+            "guestId": "f21f4103-38e1-42f6-b053-c35680c4e7c4",
+            "hostId": "130e2492-a21c-4211-b68c-91cb3a39f294",
+            "name": "Chat 1",
+            "timestamp": "2023-08-26T03:25:17.518Z",
+            "uuid": "6dc6044a-a377-48f7-98a3-e5953aec281e"
+          },
+          {
+            "guestId": "f21f4103-38e1-42f6-b053-c35680c4e7c4",
+            "hostId": "130e2492-a21c-4211-b68c-91cb3a39f294",
+            "name": "Chat 1",
+            "timestamp": "2023-08-26T03:27:07.144Z",
+            "uuid": "f19f9598-7e63-4495-bdab-cfd075be6460"
+          },
+          {
+            "guestId": "f21f4103-38e1-42f6-b053-c35680c4e7c4",
+            "hostId": "130e2492-a21c-4211-b68c-91cb3a39f294",
+            "name": "Chat 1",
+            "timestamp": "2023-08-26T03:27:40.362Z",
+            "uuid": "0639104d-aed7-4a1f-a54d-d7888fc266fa"
+          },
+          {
+            "guestId": "f21f4103-38e1-42f6-b053-c35680c4e7c4",
+            "hostId": "130e2492-a21c-4211-b68c-91cb3a39f294",
+            "name": "Chat 1",
+            "timestamp": "2023-08-26T03:28:35.664Z",
+            "uuid": "dc8d826b-71d6-47df-9f64-4a5e43ff3cc0"
+          },
+          {
+            "guestId": "f21f4103-38e1-42f6-b053-c35680c4e7c4",
+            "hostId": "130e2492-a21c-4211-b68c-91cb3a39f294",
+            "name": "Chat 1",
+            "timestamp": "2023-08-26T03:28:59.265Z",
+            "uuid": "06a209c1-4829-491a-8dbe-b6e3631bfdb9"
+          },
+          {
+            "guestId": "f21f4103-38e1-42f6-b053-c35680c4e7c4",
+            "hostId": "130e2492-a21c-4211-b68c-91cb3a39f294",
+            "name": "Chat 1",
+            "timestamp": "2023-08-26T03:32:47.935Z",
+            "uuid": "dc54aff8-d484-4b30-890f-1d676b70cf91"
+          },
+          {
+            "guestId": "f21f4103-38e1-42f6-b053-c35680c4e7c4",
+            "hostId": "130e2492-a21c-4211-b68c-91cb3a39f294",
+            "name": "Chat 1",
+            "timestamp": "2023-08-26T03:34:08.989Z",
+            "uuid": "367068c3-77cf-47f9-8e5e-cace436450ae"
+          },
+          {
+            "guestId": "f21f4103-38e1-42f6-b053-c35680c4e7c4",
+            "hostId": "130e2492-a21c-4211-b68c-91cb3a39f294",
+            "name": "Chat 1",
+            "timestamp": "2023-08-26T03:38:50.344Z",
+            "uuid": "58adc2df-ceff-4464-a35e-361ec8de5057"
+          },
+          {
+            "guestId": "f21f4103-38e1-42f6-b053-c35680c4e7c4",
+            "hostId": "130e2492-a21c-4211-b68c-91cb3a39f294",
+            "name": "Chat 1",
+            "timestamp": "2023-08-26T03:39:05.170Z",
+            "uuid": "498d81c4-6655-43e7-8d18-53594ac31020"
+          },
+          {
+            "guestId": "f21f4103-38e1-42f6-b053-c35680c4e7c4",
+            "hostId": "130e2492-a21c-4211-b68c-91cb3a39f294",
+            "name": "Chat 1",
+            "timestamp": "2023-08-26T03:39:10.587Z",
+            "uuid": "786732b1-7d36-44b0-83b8-f5e2250d7f57"
+          },
+          {
+            "guestId": "f21f4103-38e1-42f6-b053-c35680c4e7c4",
+            "hostId": "130e2492-a21c-4211-b68c-91cb3a39f294",
+            "name": "Chat 1",
+            "timestamp": "2023-08-26T03:42:47.809Z",
+            "uuid": "096c2ff3-be93-4be4-b8ea-a364ebe22d77"
+          },
+          {
+            "guestId": "f21f4103-38e1-42f6-b053-c35680c4e7c4",
+            "hostId": "130e2492-a21c-4211-b68c-91cb3a39f294",
+            "name": "Chat 1",
+            "timestamp": "2023-08-26T03:45:28.855Z",
+            "uuid": "9046e1cc-5fd5-4469-8096-528a93af79a1"
+          },
+          {
+            "guestId": "f21f4103-38e1-42f6-b053-c35680c4e7c4",
+            "hostId": "130e2492-a21c-4211-b68c-91cb3a39f294",
+            "name": "Chat 1",
+            "timestamp": "2023-08-26T03:46:55.040Z",
+            "uuid": "c1c7e7f5-9795-4696-93ab-98082c246ac2"
+          },
+          {
+            "guestId": "f21f4103-38e1-42f6-b053-c35680c4e7c4",
+            "hostId": "130e2492-a21c-4211-b68c-91cb3a39f294",
+            "name": "Chat 1",
+            "timestamp": "2023-08-26T03:47:00.093Z",
+            "uuid": "62326134-6e3e-41f0-befb-51aa1d62756d"
+          },
+          {
+            "guestId": "f21f4103-38e1-42f6-b053-c35680c4e7c4",
+            "hostId": "130e2492-a21c-4211-b68c-91cb3a39f294",
+            "name": "Chat 1",
+            "timestamp": "2023-08-26T03:47:22.876Z",
+            "uuid": "5a8cc5ce-549f-4d01-ab27-7f91937bd581"
+          },
+          {
+            "guestId": "f21f4103-38e1-42f6-b053-c35680c4e7c4",
+            "hostId": "130e2492-a21c-4211-b68c-91cb3a39f294",
+            "name": "Chat 1",
+            "timestamp": "2023-08-26T03:50:47.093Z",
+            "uuid": "96da3fad-860e-4060-ba5f-1e7d1e387f6a"
+          },
+          {
+            "guestId": "f21f4103-38e1-42f6-b053-c35680c4e7c4",
+            "hostId": "130e2492-a21c-4211-b68c-91cb3a39f294",
+            "name": "Chat 1",
+            "timestamp": "2023-08-26T03:51:37.480Z",
+            "uuid": "bcf3c8ca-d644-41fe-bdc5-09e5df2a24d0"
+          },
+          {
+            "guestId": "f21f4103-38e1-42f6-b053-c35680c4e7c4",
+            "hostId": "130e2492-a21c-4211-b68c-91cb3a39f294",
+            "name": "Chat 1",
+            "timestamp": "2023-08-26T03:52:22.851Z",
+            "uuid": "70379120-aaaa-40ab-b017-42aa8a5a5ebf"
+          },
+          {
+            "guestId": "f21f4103-38e1-42f6-b053-c35680c4e7c4",
+            "hostId": "130e2492-a21c-4211-b68c-91cb3a39f294",
+            "name": "Chat 1",
+            "timestamp": "2023-08-26T03:53:36.271Z",
+            "uuid": "27a6cb3d-2ba9-4510-b3f7-f149991b475f"
+          },
+          {
+            "guestId": "f21f4103-38e1-42f6-b053-c35680c4e7c4",
+            "hostId": "130e2492-a21c-4211-b68c-91cb3a39f294",
+            "name": "Chat 1",
+            "timestamp": "2023-08-26T03:53:41.633Z",
+            "uuid": "5fe33dd0-d46a-4222-8772-30cfd30bd321"
+          },
+          {
+            "guestId": "f21f4103-38e1-42f6-b053-c35680c4e7c4",
+            "hostId": "130e2492-a21c-4211-b68c-91cb3a39f294",
+            "name": "Chat 1",
+            "timestamp": "2023-08-26T03:53:45.966Z",
+            "uuid": "3898f1a9-c838-46da-89cb-af5890c63ffc"
+          },
+          {
+            "guestId": "f21f4103-38e1-42f6-b053-c35680c4e7c4",
+            "hostId": "130e2492-a21c-4211-b68c-91cb3a39f294",
+            "name": "Chat 1",
+            "timestamp": "2023-08-26T03:54:58.844Z",
+            "uuid": "41d84abe-ec93-4c74-aa15-c05c872c5993"
+          },
+          {
+            "guestId": "f21f4103-38e1-42f6-b053-c35680c4e7c4",
+            "hostId": "130e2492-a21c-4211-b68c-91cb3a39f294",
+            "name": "Chat 1",
+            "timestamp": "2023-08-26T03:57:26.353Z",
+            "uuid": "047204d6-7c4a-46c0-b67a-7a2840004bd4"
+          },
+          {
+            "guestId": "f21f4103-38e1-42f6-b053-c35680c4e7c4",
+            "hostId": "130e2492-a21c-4211-b68c-91cb3a39f294",
+            "name": "Chat 1",
+            "timestamp": "2023-08-26T03:58:10.240Z",
+            "uuid": "d24c6af2-1d4a-4524-a683-8afbff839a26"
+          },
+          {
+            "guestId": "f21f4103-38e1-42f6-b053-c35680c4e7c4",
+            "hostId": "130e2492-a21c-4211-b68c-91cb3a39f294",
+            "name": "Chat 1",
+            "timestamp": "2023-08-26T03:58:14.873Z",
+            "uuid": "8fdc6917-8526-4396-a5c4-53f09ebbfde6"
+          }
+        ],
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "matchingRules": {
+          "body": {
+            "$": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            }
+          },
+          "header": {}
+        },
+        "status": 200
+      }
+    },
+    {
+      "description": "chats del anfitrion",
+      "providerStates": [
+        {
+          "name": "realizar busqueda de chats del anfitrion"
+        }
+      ],
+      "request": {
+        "headers": {
+          "Accept": "application/json"
+        },
+        "method": "GET",
+        "path": "/chat/host/130e2492-a21c-4211-b68c-91cb3a39f294"
+      },
+      "response": {
+        "body": [
+          {
+            "guestId": "f21f4103-38e1-42f6-b053-c35680c4e7c4",
+            "hostId": "130e2492-a21c-4211-b68c-91cb3a39f294",
+            "id": 2,
+            "name": "Chat 1",
+            "timestamp": "2023-08-26T02:44:39.741Z",
+            "uuid": "86618afb-beca-4502-a9e0-d2ac7df4e586"
+          },
+          {
+            "guestId": "f21f4103-38e1-42f6-b053-c35680c4e7c4",
+            "hostId": "130e2492-a21c-4211-b68c-91cb3a39f294",
+            "id": 6,
+            "name": "Chat 1",
+            "timestamp": "2023-08-26T02:47:19.415Z",
+            "uuid": "31396c32-26cf-418c-b64e-a1eca70b115b"
+          },
+          {
+            "guestId": "f21f4103-38e1-42f6-b053-c35680c4e7c4",
+            "hostId": "130e2492-a21c-4211-b68c-91cb3a39f294",
+            "id": 10,
+            "name": "Chat 1",
+            "timestamp": "2023-08-26T02:48:17.516Z",
+            "uuid": "03457e18-51ba-4171-b86d-b106118dcb0d"
+          }
+        ],
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "matchingRules": {
+          "body": {
+            "$": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            }
+          },
+          "header": {}
+        },
+        "status": 200
+      }
+    },
+    {
+      "description": "chats del huesped",
+      "providerStates": [
+        {
+          "name": "realizar busqueda de chats del huesped"
+        }
+      ],
+      "request": {
+        "headers": {
+          "Accept": "application/json"
+        },
+        "method": "GET",
+        "path": "/chat/guest/f21f4103-38e1-42f6-b053-c35680c4e7c4"
+      },
+      "response": {
+        "body": [
+          {
+            "guestId": "f21f4103-38e1-42f6-b053-c35680c4e7c4",
+            "hostId": "130e2492-a21c-4211-b68c-91cb3a39f294",
+            "id": 2,
+            "name": "Chat 1",
+            "timestamp": "2023-08-26T02:44:39.741Z",
+            "uuid": "86618afb-beca-4502-a9e0-d2ac7df4e586"
+          },
+          {
+            "guestId": "f21f4103-38e1-42f6-b053-c35680c4e7c4",
+            "hostId": "130e2492-a21c-4211-b68c-91cb3a39f294",
+            "id": 6,
+            "name": "Chat 1",
+            "timestamp": "2023-08-26T02:47:19.415Z",
+            "uuid": "31396c32-26cf-418c-b64e-a1eca70b115b"
+          },
+          {
+            "guestId": "f21f4103-38e1-42f6-b053-c35680c4e7c4",
+            "hostId": "130e2492-a21c-4211-b68c-91cb3a39f294",
+            "id": 10,
+            "name": "Chat 1",
+            "timestamp": "2023-08-26T02:48:17.516Z",
+            "uuid": "03457e18-51ba-4171-b86d-b106118dcb0d"
+          }
+        ],
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "matchingRules": {
+          "body": {
+            "$": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            }
+          },
+          "header": {}
+        },
+        "status": 200
+      }
+    }
+  ],
+  "metadata": {
+    "pact-js": {
+      "version": "12.1.0"
+    },
+    "pactRust": {
+      "ffi": "0.4.7",
+      "models": "1.1.9"
+    },
+    "pactSpecification": {
+      "version": "3.0.0"
+    }
+  },
+  "provider": {
+    "name": "chat-service"
+  }
+}
